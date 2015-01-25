@@ -6,7 +6,6 @@ Puppet manifest to composer
 
 See [Composer site](https://getcomposer.org/)
 
-
 ##Example:
 
 ```puppet
