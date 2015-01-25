@@ -1,0 +1,2 @@
+class composer::config {
+}
