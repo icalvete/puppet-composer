@@ -1,4 +1,4 @@
-#puppet-rundeck
+#puppet-composer
 
 Puppet manifest to composer 
 
