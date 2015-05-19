@@ -15,4 +15,9 @@ class composer::install {
     provider => 'shell',
     require  => File['composer_install_dir']
   }
+
+  file { '/usr/local/bin/composer.phar':
+    ensure => link,
+    target => "${composer::install_dir}/composer.phar"
+  }
 }
