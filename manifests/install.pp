@@ -9,11 +9,12 @@ class composer::install {
   }
 
   exec{ 'composer_install':
-    command  => "curl -sS https://getcomposer.org/installer | php",
-    user     => 'root',
-    cwd      => $composer::install_dir,
-    provider => 'shell',
-    require  => File['composer_install_dir']
+    command     => "curl -sS https://getcomposer.org/installer | php",
+    user        => 'root',
+    cwd         => $composer::install_dir,
+    provider    => 'shell',
+    require     => File['composer_install_dir'],
+    environment => 'COMPOSER_HOME=/root',
   }
 
   file { '/usr/local/bin/composer.phar':
