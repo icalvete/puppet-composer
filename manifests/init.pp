@@ -1,5 +1,5 @@
 class composer (
-  
+
   $install_dir = $composer::params::install_dir
 
 ) inherits composer::params {
