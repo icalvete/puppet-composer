@@ -22,4 +22,10 @@ class composer::install {
     ensure => link,
     target => "${composer::install_dir}/composer.phar"
   }
+
+  file { '/usr/local/bin/composer':
+    ensure => 'link',
+    target => "${composer::install_dir}/composer.phar"
+  }
+
 }
